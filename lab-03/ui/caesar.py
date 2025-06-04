@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file './ui/caesar.ui'
+# Form implementation generated from reading ui file 'Caesar.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -10,46 +10,52 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-import os
-os.environ['QT_QPA_PLATFOM_PLUGIN_PATH'] = "../platforms"
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(1124, 892)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.Plaintext = QtWidgets.QLabel(self.centralwidget)
-        self.Plaintext.setGeometry(QtCore.QRect(90, 150, 47, 13))
-        self.Plaintext.setObjectName("Plaintext")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(140, 140, 81, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(90, 250, 47, 13))
+        self.label_2.setGeometry(QtCore.QRect(140, 330, 91, 16))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(90, 390, 71, 16))
+        self.label_3.setGeometry(QtCore.QRect(140, 500, 71, 41))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(190, 480, 75, 23))
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(600, 480, 75, 23))
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser.setGeometry(QtCore.QRect(190, 90, 511, 111))
-        self.textBrowser.setObjectName("textBrowser")
-        self.textBrowser_2 = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser_2.setGeometry(QtCore.QRect(190, 240, 511, 31))
-        self.textBrowser_2.setObjectName("textBrowser_2")
-        self.textBrowser_3 = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser_3.setGeometry(QtCore.QRect(190, 330, 511, 101))
-        self.textBrowser_3.setObjectName("textBrowser_3")
-        self.textBrowser_4 = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser_4.setGeometry(QtCore.QRect(290, 10, 256, 41))
-        self.textBrowser_4.setObjectName("textBrowser_4")
+        self.txtKey = QtWidgets.QTextEdit(self.centralwidget)
+        self.txtKey.setGeometry(QtCore.QRect(280, 330, 661, 31))
+        self.txtKey.setObjectName("txtKey")
+        self.txtPlain = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.txtPlain.setGeometry(QtCore.QRect(280, 140, 661, 121))
+        self.txtPlain.setObjectName("txtPlain")
+        self.txtCipher = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.txtCipher.setGeometry(QtCore.QRect(280, 500, 661, 121))
+        self.txtCipher.setObjectName("txtCipher")
+        self.textEdit_2 = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit_2.setGeometry(QtCore.QRect(360, 30, 431, 71))
+        self.textEdit_2.setObjectName("textEdit_2")
+        self.btnEn = QtWidgets.QPushButton(self.centralwidget)
+        self.btnEn.setGeometry(QtCore.QRect(280, 720, 75, 51))
+        self.btnEn.setObjectName("btnEn")
+        self.btnDe = QtWidgets.QPushButton(self.centralwidget)
+        self.btnDe.setGeometry(QtCore.QRect(854, 720, 91, 51))
+        self.btnDe.setObjectName("btnDe")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1124, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -62,16 +68,16 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.Plaintext.setText(_translate("MainWindow", "Plain text:"))
-        self.label_2.setText(_translate("MainWindow", "Key:"))
-        self.label_3.setText(_translate("MainWindow", "CipherText:"))
-        self.pushButton.setText(_translate("MainWindow", "Encrypt"))
-        self.pushButton_2.setText(_translate("MainWindow", "Decrypt"))
-        self.textBrowser_4.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.label.setText(_translate("MainWindow", "Plain text"))
+        self.label_2.setText(_translate("MainWindow", "Key"))
+        self.label_3.setText(_translate("MainWindow", "Cipher text"))
+        self.textEdit_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; font-weight:600;\">CAESAR CIPHER</span></p></body></html>"))
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt; font-weight:600;\">CAESAR CIPHER</span></p></body></html>"))
+        self.btnEn.setText(_translate("MainWindow", "Encrypt"))
+        self.btnDe.setText(_translate("MainWindow", "Decrypt"))
 
 
 if __name__ == "__main__":
